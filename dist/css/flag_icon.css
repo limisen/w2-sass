@@ -1,0 +1,2 @@
+body{background-color:#fff}.center{display:grid;margin:0;min-height:100vh;place-items:center}.flex{display:flex;gap:2rem}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{margin:0;padding:0}.flag_icon{background-color:#b0e0e6;height:100%;position:relative;width:100%}.flag_icon:before{height:60px;left:50%;width:8px}.flag_icon:after,.flag_icon:before{background-color:gray;content:"";position:absolute;top:50%}.flag_icon:after{border-radius:5px;box-shadow:gray;height:30px;left:52%;width:40px}
+/*# sourceMappingURL=flag_icon.css.map */
