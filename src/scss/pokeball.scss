@@ -22,20 +22,26 @@ body {
     &::before {
         content: '';
         position: absolute;
-        top: calc(50% - 20px);
+        top: calc(50% - 10px);
+        
         height: 20px;
         width: 100%;
+        
         border: $pb_line, solid, $pb_line_clr;
     }
 
     &::after {
         content: '';
+        background-color: white;
+        
         position: absolute;
-        top: 43%;
-        left: 42%;
-        height: 4rem;
-        width: 4rem;
+        top: 37%;
+        left: 38%;
+
+        height: 5rem;
+        width: 5rem;
         border-radius: 50%;
-        border: $pb_line, solid, $pb_line_clr;
+        
+        border: ($pb_line + 5px), solid, $pb_line_clr;
     }
 }
