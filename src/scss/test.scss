@@ -1,0 +1,17 @@
+@use 'base/' as *;
+@use 'partials/colors' as *;
+
+.kaka {
+  width: 200px;
+  aspect-ratio: 2/1;
+
+  background-color: $a;
+
+  &:hover {
+    width: 400px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}

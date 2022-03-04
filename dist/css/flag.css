@@ -1,0 +1,2 @@
+body{background-color:#fff}.center{display:grid;margin:0;min-height:100vh;place-items:center}.flex{display:flex;gap:2rem}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{margin:0;padding:0}.flag{background-color:#006aa7;height:20rem;position:relative;width:32rem}.flag:before{height:20%;top:40%;width:100%}.flag:after,.flag:before{background-color:#fecc00;content:"";position:absolute}.flag:after{height:100%;left:31.25%;top:0;width:12.5%}
+/*# sourceMappingURL=flag.css.map */

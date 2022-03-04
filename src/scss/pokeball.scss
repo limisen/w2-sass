@@ -1,0 +1,41 @@
+@use 'base/' as *;
+@use 'partials/' as *;
+
+body {
+    background-color: powderblue ;
+}
+.pokeball {
+    width: $pokeball-size;
+    height: $pokeball-size;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    background-image: linear-gradient(
+        $pb_top 0%,
+        $pb_top 50%,
+        $pb_btm 50%,
+        $pb_btm 100%,
+        );
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 20px);
+        height: 20px;
+        width: 100%;
+        border: $pb_line, solid, $pb_line_clr;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 43%;
+        left: 42%;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: $pb_line, solid, $pb_line_clr;
+    }
+}

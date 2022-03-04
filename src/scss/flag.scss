@@ -1,0 +1,34 @@
+@use 'base/' as *;
+@use 'partials/' as *;
+
+.flag {
+    width: $flag-swe-width;
+    height:$flag-swe-height;
+    background-color: $flag-swe-color-1;
+    position: relative;
+
+    &::before {
+        content:'';
+    
+        background-color: $flag-swe-color-2;
+    
+        height: 20%;
+        width: 100%;
+    
+        position: absolute;
+        top: 40%;
+        }
+
+    &::after {
+        content:'';
+
+        background-color: $flag-swe-color-2;
+
+        height: 100%;
+        width: 12.5%;
+
+        position: absolute;
+        left: 31.25%;
+        top: 0;
+        }
+    }
