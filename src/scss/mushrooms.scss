@@ -1,0 +1,25 @@
+@use 'base/' as *;
+@use 'partials/' as *;
+
+body {
+    background-color: powderblue;
+}
+
+.shroom {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: calc($sh-px-size * 18);
+    height: calc($sh-px-size * 16);
+    
+    &__one {
+        @include shroompixelcolors($shroom__two);
+    }
+    &__two {
+        @include shroompixelcolors($shroom__one);
+    }
+}
+
+.shrooms {
+    display: flex;
+}

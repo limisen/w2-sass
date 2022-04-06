@@ -1,0 +1,63 @@
+@use 'sizes' as *;
+@use 'colors' as *;
+
+// Zelda
+@mixin heartpixelcolors ($heart-map) {
+    $heart-colors: (
+        t: transparent,
+        b: $heart-black,
+        r: $heart-red,
+        w: $heart-white
+    );
+
+    $num: 1;
+
+    @each $value in $heart-map {
+        .px:nth-child(#{$num}) {
+            background-color: map-get($map: $heart-colors, $key: $value);
+        }
+        $num: $num + 1;
+    }
+
+    .px {
+        width: $px-size;
+        height: $px-size;
+    }
+}
+
+// Mushrooms
+@mixin shroompixelcolors ($shroom-map) {
+    $shroom-colors: (
+        t: transparent,
+        b: $shroom-black,
+        r: $shroom-red,
+        g: $shroom-green,
+        s: $shroom-skin,
+        w: $shroom-white
+    );
+    
+    $num: 1;
+
+    @each $value in $shroom-map {
+        .sh-px:nth-child(#{$num}) {
+            background-color: map-get($map: $shroom-colors, $key: $value);
+        }
+        $num: $num + 1;
+    }
+
+    .sh-px {
+        width: $sh-px-size;
+        height: $sh-px-size;
+    }
+}
+
+// Popcicle
+@mixin  glass($color: blue, $type:'color') {
+    background-color: $color;
+
+    @if $type == "bg-image" {
+        background-image: $color;
+    }
+}
+
+// NEXT PROJCET

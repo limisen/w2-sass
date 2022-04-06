@@ -1,0 +1,75 @@
+@use 'base/' as *;
+@use 'partials/' as *;
+
+body {
+    background-color: $mike-bg-clr;
+}
+
+.outer_eye {
+    position: absolute;
+    background-color: $outer_eye;
+    width: $outer_eye_width;
+    height: $outer_eye_height;
+    border-radius: 50%;
+    left: calc(50% - $outer_eye_width / 2);
+    bottom: 40%;
+    border: 5px solid black;
+}
+
+.inner_eye {
+    position: absolute;
+    z-index: 10;
+    background-image: $inner-eye-clr;
+    width: $inner-eye-width;
+    height: $inner-eye-height;
+    border-radius: 50%;
+    left: calc(50% - $inner-eye-width / 2);
+    top: calc(50% - $inner-eye-height / 2);
+    border: 5px solid black;
+
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: 15;
+        background-color: white;
+        width: 30px;
+        height: 26px;
+        border-radius: 50%;
+
+        top: 32%;
+        left: 51%;
+    }
+}
+
+.smile{
+    position: absolute;
+    border-bottom: 15px solid black;
+
+    border-radius: 50%;
+    width: 80%;
+    height: 57%;
+
+    &::before {
+        content: "";
+        position: absolute;
+        border-top: 5px solid black;
+        border-radius: 50%;
+        width: $dimples-w;
+        height: $dimples-h;
+        left: calc(0% - ($dimples-w / 2));
+        bottom: calc(45% - ($dimples-h / 2));
+        transform: rotate(-10deg);
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        border-top: 5px solid black;
+        border-radius: 50%;
+        width: $dimples-w;
+        height: $dimples-h;
+        right: calc(0% - ($dimples-w / 2));
+        bottom: calc(45% - ($dimples-h / 2));
+        transform: rotate(10deg);
+    }
+}

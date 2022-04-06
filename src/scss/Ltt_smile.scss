@@ -1,0 +1,67 @@
+@use 'base/' as *;
+@use 'partials/' as *;
+
+body {
+    background-color: $Ltt_smile-bg-clr;
+}
+
+.ruond {
+    position: absolute;
+    width: $ruond-w;
+    height: $ruond-h;
+    border-radius: 50%;
+
+    background-color: $ruond-bg-clr;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: $ruond-smile-w;
+        height: $ruond-smile-h;
+        border-radius: 50%;
+        background-image: $ruond-smile-clr;
+
+        left: calc(50% - ($ruond-smile-w / 2));
+        bottom: calc(45% - ($ruond-smile-h / 2));
+    }
+}
+
+.headphones {
+    position: absolute;
+    width: $headphones-w;
+    height: $headphones-h;
+    border-radius: 49%;
+    border-top: 20px solid rgb(87, 86, 86);
+}
+
+.cups{
+    position: absolute;
+    width: $headphones-w;
+    height: $headphones-h;
+    border-radius: 49%;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: rgb(87, 86, 86);
+        width: 80px;
+        height: 150px;
+        top: calc(63% - 150px);
+        left: calc(10% - 80px);
+        border-right: 20px solid rgb(61, 61, 61);
+        border-top-left-radius: 25%;
+        border-bottom-left-radius: 25%;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: rgb(87, 86, 86);
+        width: 80px;
+        height: 150px;
+        top: calc(63% - 150px);
+        right: calc(10% - 80px);
+        border-left: 20px solid rgb(61, 61, 61);
+        border-top-right-radius: 25%;
+        border-bottom-right-radius: 25%;
+    }
+}

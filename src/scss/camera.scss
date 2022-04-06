@@ -1,0 +1,114 @@
+@use 'base/' as *;
+@use 'partials/' as *;
+
+body {
+background-color: $camera-bg-color;
+}
+
+.camera {
+    position: relative;
+    width: $camera-wdth;
+    height: $camera-height;
+    background-image: linear-gradient(
+        white 0%,
+        white 25%,
+        $camera-band-clr 25%,
+        $camera-band-clr 75%,
+        white 75%,
+        white 100%
+    );
+
+    border-radius: 50px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: rgb(65, 72, 75);
+
+        top: calc(50% - ($lens-wdth/2));
+        left: calc(50% - ($lens-wdth/2));
+        
+        width: $lens-wdth;
+        height:  $lens-wdth;
+        
+        border-radius: 50%;
+        border: 20px,  solid,  white;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+
+        top: calc(50% - ($inner-lens /2));
+        left: calc(50% - ($inner-lens /2));
+        
+        width: $inner-lens;
+        height:  $inner-lens;
+
+        border-radius: 50%;
+        background-image: radial-gradient(
+            circle at center,
+            rgb(65, 72, 75) 0%,
+            rgb(65, 72, 75) 28%,
+            rgb(100, 112, 116) 28%,
+            rgb(100, 112, 116) 61%,
+            darkgrey 61%,
+            darkgrey 100%
+        );
+    }
+}
+
+.lens-shdw{
+    position: relative;
+
+    background-image: linear-gradient(to bottom right,
+    rgba(0, 0, 0, 0.3) 0%, 
+    rgba(0, 0, 0, 0.3) 50%, 
+    transparent 50%,
+    transparent 100%,
+    );
+    
+    top: calc(50% - ($inner-lens /2));
+    left: calc(50% - ($inner-lens /2));
+    
+    width: $inner-lens;
+    height:  $inner-lens;
+    border-radius: 50%;
+    
+    z-index: 10;
+    overflow: hidden;
+}
+
+.details{
+    background-color: transparent;
+
+    &::before{
+        content: '';
+        position: absolute;
+
+        background-color: $camera-bttn-clr;
+
+        width: $bttn-wdth;
+        height: $bttn-height;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+
+        top: calc($camera-height * (-.03));
+        left: calc($camera-wdth * .09);
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+
+        background-color: $preview-clr;
+        border: calc($preview * .1), solid, $preview-border-clr;
+        border-radius: 50%;
+
+        width: $preview;
+        aspect-ratio: 1;
+
+        top: calc($camera-height * .06);
+        right: calc($camera-wdth * .05);
+    }
+}

@@ -8,3 +8,85 @@ $pokeball-size: 20rem;
 //$pb_line: calc($pokeball-size * 0.1);
 $pb_line: 10px;
 $pb_dott: calc($pokeball-size * 0.03);
+
+// Flagg Icon
+$flag-icon-height: 30px;
+$flag-icon-width: 40px;
+$flag-icon-radius: 5px;
+
+// Terminal
+$term-width: 45rem;
+$term-height: calc($term-width * .5);
+$term-radius: 5px;
+
+$term-title: calc($term-height * .08);
+
+$btns-widht: calc($term-title * .8);
+$btns-top: calc($btns-widht * .2);
+$btns-left: 0.5%;
+
+$term-token-wdth: calc($term-width * 0.2);
+$token-thic: calc($term-width * 0.05);
+$token-top: calc($term-height / 3);
+
+// Camera
+$camera-wdth: 800px;
+$camera-height: $camera-wdth * .7;
+$lens-wdth: $camera-wdth * .45;
+$inner-lens: $lens-wdth * .75;
+
+$preview: $lens-wdth * .2;
+$bttn-wdth: $lens-wdth * .2;
+$bttn-height: $camera-height * .03;
+
+// Zelda heart
+$px-size: 30px;
+
+// Mushrooms
+$sh-px-size: 24px;
+
+// Iceicle pops
+$popcicle-with: 28vw;
+$popcicle-heigth: 75vh;
+
+$ice-one-layer-height: $popcicle-heigth * .65; 
+
+$ice-stick-heigth: calc($popcicle-heigth * .7);
+$ice-stick-width: calc($popcicle-with * .2);
+$ice-stick-radius: 30px;
+
+$ice-layer-bottom-R-radius: 40px;
+$ice-layer-bottom-L-radius: 40px;
+
+// Round shroom
+$hat-width: 590px;
+$hat-heigth: 490px;
+
+$spots-width: calc($hat-width * 0.50);
+$spots-height: calc($hat-width * 0.50);
+
+$stalk-width: 320px;
+$stalk-height: 165px;
+
+$eye-width: 35px;
+$eye-height: 80px;
+
+// mike wazowski
+$inner-eye-width: 150px;
+$inner-eye-height: 150px;
+
+$outer_eye_height: 320px;
+$outer_eye_width: 320px;
+
+$dimples-w: 60px;
+$dimples-h: calc($dimples-w / 2);
+
+// LTT Smile
+
+$ruond-w: 400px;
+$ruond-h: 400px;
+$ruond-smile-w: 290px;
+$ruond-smile-h: 290px;
+
+$headphones-w: 430px;
+$headphones-h: 490px;

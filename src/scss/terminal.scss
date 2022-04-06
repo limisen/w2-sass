@@ -1,0 +1,49 @@
+@use 'base/' as *;
+@use 'partials/' as *;
+
+body {
+    background-color: powderblue;
+}
+
+.terminal {
+    height: $term-height;
+    width: $term-width;
+    border-radius: $term-radius;
+
+    background-image: linear-gradient(
+        gray 0,
+        gray $term-title,
+        black $term-title,
+        black 100%
+    );
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $term-close;
+        
+        width: $btns-widht;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        margin-top: $btns-top;
+        margin-left: $btns-left;
+
+        box-shadow: 
+        calc($btns-widht + $btns-widht/2) 0px 0px $term-min,
+        calc($btns-widht + ($btns-widht * 2)) 0px 0px $term-max;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: $term-token-wdth;
+        aspect-ratio: 1;
+
+        margin-top: $token-top;
+
+        border-left: $token-thic solid white;
+        border-bottom: $token-thic solid white;
+
+        transform: rotate(225deg);
+    }
+}

@@ -1,0 +1,28 @@
+@use 'base/' as *;
+@use 'partials/' as *;
+
+body {
+    background-color: powderblue;
+}
+
+.heart {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: calc($px-size * 8);
+    height: calc($px-size * 8);
+    
+    &__one {
+        @include heartpixelcolors($heart__one);
+    }
+    &__two {
+        @include heartpixelcolors($heart__two);
+    }
+    &__three {
+        @include heartpixelcolors($heart__three);
+    }
+}
+
+.life {
+    display: flex;
+}

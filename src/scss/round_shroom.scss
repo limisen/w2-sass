@@ -1,0 +1,103 @@
+@use 'base/' as *;
+@use 'partials/' as *;
+
+body {
+    background-color: rgb(87, 171, 246);
+}
+
+.full{
+    top: 5%;
+    position: absolute;
+}
+
+.spot {
+    position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        border: black, solid, 5px;
+        z-index: 15;
+        
+        width: $spots-width;
+        aspect-ratio: 1;
+        
+        left: calc(51% - ($spots-width / 2));
+        top: calc(36% - ($spots-height / 2));
+}
+.shroom_hat {
+    background: $sh-hat;
+    position: relative;
+    overflow: hidden;
+    border: black solid 5px;
+    width: $hat-width;
+    height: $hat-heigth;
+    border-radius: 50% 50% 40% 40%/65% 65% 35% 40%;
+
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: $spots-bg-image;
+        border-radius: 50%;
+        z-index: 15;
+        
+        width: $spots-width;
+        aspect-ratio: 1;
+        
+        right: calc(22% - ($spots-width));
+        top: calc(62% - ($spots-height / 2));
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        background-image: $spots-bg-image;
+        border-radius: 50%;
+        z-index: 15;
+        
+        width: $spots-width;
+        aspect-ratio: 1;
+        
+        left: calc(22% - ($spots-width));
+        top: calc(62% - ($spots-height / 2));
+    }
+}
+
+.shroom_body{
+    background: $sh-body;
+    position: relative;
+    border: black solid 5px;
+    z-index: 10;
+    width: $stalk-width;
+    height: $stalk-height;
+    left: calc(50% - ($stalk-width / 2));
+    top: calc(($stalk-height / 3) * -2);
+    border-radius: 40% 41% 27% 35% / 18% 19% 82% 82% ;
+
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: 20;
+        width: $eye-width;
+        height: $eye-height;
+        background: black;
+
+        left: calc(31% - ($eye-width / 2));
+        top: calc($eye-height * 0.3);
+
+        border-radius: 43%;
+
+        box-shadow: 130px 0 0 black;
+    }
+    
+    &::after{
+        content: '';
+        position: absolute;
+        left: calc(34% - ($eye-width / 2));
+        top: calc($eye-height * 0.4);
+        z-index: 20;
+        width: calc($eye-width * 0.4);
+        height: calc($eye-height * 0.3);
+        background-color: #fff;
+        box-shadow: 130px 0 0 white;
+        border-radius: 43%;
+    }
+}

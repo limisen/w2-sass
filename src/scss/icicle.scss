@@ -1,0 +1,68 @@
+@use 'base/' as *;
+@use 'partials/' as *;
+
+body {
+    background-color: powderblue;
+}
+
+.popcicles {
+    display: flex;
+}
+
+.pop-1 {
+    position: relative;
+    width: $popcicle-with;
+    height: $popcicle-heigth;
+}
+
+.pop-1 > .layer{
+    @include glass($ice-lime, 'color');
+    width: $popcicle-with;
+    height: $ice-one-layer-height;
+    position: absolute;
+    z-index: 10;
+    border-top-left-radius: calc($popcicle-with * .42) calc($ice-one-layer-height / 2) ;
+    border-top-right-radius: calc($popcicle-with * .42) calc($ice-one-layer-height / 2) ;
+    border-bottom-left-radius: $ice-layer-bottom-L-radius;
+    border-bottom-right-radius: $ice-layer-bottom-R-radius;
+}
+.pop-1 > .stick{
+    @include glass($ice-stick-1, 'color');
+    width: $ice-stick-width;
+    height: $ice-stick-heigth;
+    justify-self: center;
+    position: absolute;
+    border-radius: $ice-stick-radius;
+    left: calc(50% - ($ice-stick-width / 2));
+    bottom: calc(40% - ($ice-stick-heigth / 2));
+}
+
+.pop-2 {
+    position: relative;
+    width: $popcicle-with;
+    height: $popcicle-heigth;
+    margin-left: 5vw
+}
+
+.pop-2 > .layer{
+    @include glass($twister, 'bg-image');
+    width: $popcicle-with;
+    height: $ice-one-layer-height;
+    position: absolute;
+    z-index: 10;
+    border-top-left-radius: calc($popcicle-with * .42) calc($ice-one-layer-height / 2) ;
+    border-top-right-radius: calc($popcicle-with * .42) calc($ice-one-layer-height / 2) ;
+    border-bottom-left-radius: $ice-layer-bottom-L-radius;
+    border-bottom-right-radius: $ice-layer-bottom-R-radius;
+}
+
+.pop-2 > .stick{
+    @include glass($ice-stick-2, 'color');
+    width: $ice-stick-width;
+    height: $ice-stick-heigth;
+    justify-self: center;
+    position: absolute;
+    border-radius: $ice-stick-radius;
+    right: calc(50% - ($ice-stick-width / 2));
+    bottom: calc(40% - ($ice-stick-heigth / 2));
+}

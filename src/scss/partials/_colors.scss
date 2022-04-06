@@ -9,3 +9,81 @@ $flag-swe-color-2: rgb(254, 204, 0); // Gul
 $pb_top: rgb(255, 90, 90);
 $pb_btm: rgb(255, 255, 255);
 $pb_line_clr: black;
+
+// Flagga Icon
+$term-close: #BF616A;
+$term-min: #EBCB8B;
+$term-max: #A3BE8C;
+
+// Camera
+$camera-bg-color: powderblue;
+$camera-band-clr: rgb(255, 60, 60);
+
+$camera-bttn-clr: darkred;
+
+$preview-clr: rgb(199, 243, 255);
+$preview-border-clr: lightgray;
+
+// Zelda Heart
+$heart-red: red;
+$heart-black: black;
+$heart-white: white;
+
+// Shrooms Heart
+$shroom-black: black;
+$shroom-white: white;
+$shroom-red: red;
+$shroom-skin: rgb(255, 205, 148);
+$shroom-green: rgb(1, 192, 60);
+
+// Icicle pops
+    //colors
+    $ice-stick-1: rgba(205, 170, 85, 1);
+    $ice-stick-2: rgba(136, 115, 22, 1);
+    $ice-lime: rgba(159, 227, 91, .8);
+    $ice-green: rgba(38, 224, 81, .8);
+    $ice-red: rgba(187, 110, 119, .8);
+    $ice-blue: rgba(38, 135, 236, .8);
+
+    //pop two
+    $twister: linear-gradient(
+        $ice-green 0%,
+        $ice-green 33%,
+        $ice-red 33%,
+        $ice-red 66%,
+        $ice-blue 66%,
+        $ice-blue 100%
+    );
+
+// Round shroom
+    $sh-hat: rgb(28, 198, 72);
+    $sh-hat-detail-w: white;
+    $sh-hat-detail-b: black;
+    $spots-bg-image: radial-gradient(
+        white 0%,
+        white 68.3%,
+        black 68.3%,
+        black 100%
+    );
+    $sh-body: rgb(243, 221, 135);
+
+// mike wazowski
+$mike-bg-clr: rgb(147, 230, 70);
+$inner-eye-clr: radial-gradient(
+    black 0%,
+    black 40%,
+    rgba(35, 161, 135, 1) 40%,
+    rgba(35, 161, 135, 1) 100%
+    );
+$outer_eye: white;
+
+// LTT Smile
+
+$Ltt_smile-bg-clr: rgb(147, 230, 70);
+$ruond-bg-clr: yellow;
+$ruond-smile-clr: linear-gradient(
+    transparent 0%,
+    transparent 50%,
+    white 50%,
+    white 100%
+);
